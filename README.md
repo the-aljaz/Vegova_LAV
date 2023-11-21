@@ -1,1 +1,3 @@
 # Vegova_LAV
+tukaj so objavljene (skoraj) vse vaje + nekj preverjanj, arduino ...
+basicly (skoraj) karkoli smo delali pri LAV
