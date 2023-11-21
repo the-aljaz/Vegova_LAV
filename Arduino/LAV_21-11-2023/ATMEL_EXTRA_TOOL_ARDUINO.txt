@@ -1,0 +1,5 @@
+Arduino
+Atmel extra tool setup
+Name: Programiraj Arduino
+Command: C:\Users\Vegova\AppData\Local\Arduino15\packages\arduino\tools\avrdude\6.3.0-arduino17/bin/avrdude.exe
+Arguments: "-CC:\Users\Vegova\AppData\Local\Arduino15\packages\arduino\tools\avrdude\6.3.0-arduino17/etc/avrdude.conf" -v -V -patmega328p -carduino "-PCOM3" -b115200 -D "-Uflash:w:$(TargetDir)$(TargetName).hex:i"
