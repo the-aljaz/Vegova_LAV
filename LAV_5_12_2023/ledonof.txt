@@ -1,0 +1,49 @@
+		.org 0x0000
+		jmp setup
+
+
+		// na tem mestu vključimo knjiznica.asm
+		// notri je kopica programov za delo, ki jih bomo potrebovali, a jih ne bi pisali sami
+		.include "knjiznica.asm"
+
+setup:
+		call setupUART    // podobno kot Serial.begin(9600);
+		call dump_registers	
+		// nastavimo B5 na izhod za vgrajeno LED
+		sbi DDRB, 5
+
+loop:   // naredimo "odmev/echo"
+		call get_char
+		call setLED
+
+		rjmp loop
+
+setLED: cpi r16,'0'
+		breq LEDoff
+		cpi r16,'1'
+		breq ledON
+		ret
+ledON:	sbi PORTB, 5
+		print ledOnMsg
+		ret
+ledOFF: cbi PORTB, 5
+		print ledOffMsg
+		ret
+
+upper:	cpi r16, 'a'    // zanima nas, ali je znak v r16 manjši od kode črke 'a'
+						// če je, bila razlika r16 - 'a' negativna in je potem C=1
+		brcs not_lowercase
+						// zdaj nas zanima, če je r16 večji od 'z'
+		cpi r16, 'z' + 1  // če je razlika negativna, takrat je C = 1, obenem pomeni, da pa 
+						  // to je mala črka
+		brcc not_lowercase
+						  // skočimo pa kadar NI 
+		andi r16, 0b1101_1111
+not_lowercase:
+		ret
+
+hello:	.db "Hello World!",10,0
+ledOnMsg:
+		.db "LED on!",10,0
+ledOffMsg:
+		.db "LED off!\n",0

@@ -1,0 +1,55 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\Debug\AssemblerApplication1.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>AssemblerApplication1.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>AssemblerApplication1.map</FILE>
+  <FILE>AssemblerApplication1.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <setup><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>9</LINE></setup>
+  <printstring><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>26</LINE></printstring>
+  <stopprinting><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>31</LINE></stopprinting>
+  <send_char><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>99</LINE></send_char>
+  <send_hex><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>38</LINE></send_hex>
+  <manjsa_od_10_1><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>46</LINE></manjsa_od_10_1>
+  <manjsa_od_10_2><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>56</LINE></manjsa_od_10_2>
+  <setupUART><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>67</LINE></setupUART>
+  <poskusi_poslati><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>101</LINE></poskusi_poslati>
+  <get_char><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>115</LINE></get_char>
+  <vrnise><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>121</LINE></vrnise>
+  <div10_8bit><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>129</LINE></div10_8bit>
+  <print_8bit_base10><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>157</LINE></print_8bit_base10>
+  <naslednja_cifra><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>162</LINE></naslednja_cifra>
+  <izpisi_cifre><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>169</LINE></izpisi_cifre>
+  <konec_izpisa><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>175</LINE></konec_izpisa>
+  <dump_registers><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>178</LINE></dump_registers>
+  <naslednji_register><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>217</LINE></naslednji_register>
+  <no_new_line><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>245</LINE></no_new_line>
+  <StackHI><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>284</LINE></StackHI>
+  <StackLO><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\knjiznica.asm</FILE><LINE>285</LINE></StackLO>
+  <hello><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>57</LINE></hello>
+  <loop><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>17</LINE></loop>
+  <setLED><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>26</LINE></setLED>
+  <upper><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>41</LINE></upper>
+  <LEDoff><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>36</LINE></LEDoff>
+  <LEDon><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>32</LINE></LEDon>
+  <not_lowercase><FILE>c:\users\vegova\Documents\Atmel Studio\7.0\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>54</LINE></not_lowercase>
+ </LABELS>
+</ASSEMBLER_INFO>

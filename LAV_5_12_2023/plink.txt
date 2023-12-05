@@ -1,0 +1,1 @@
+plink -serial COM3 -sercfg 9600
