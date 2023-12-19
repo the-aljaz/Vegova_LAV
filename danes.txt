@@ -1,0 +1,29 @@
+		.org 0x0000
+		jmp setup
+
+
+		// na tem mestu vključimo knjiznica.asm
+		// notri je kopica programov za delo, ki jih bomo potrebovali, a jih ne bi pisali sami
+		.include "knjiznica.asm"
+
+setup:
+		sbi DDRB, 5
+		cbi DDRD, 4
+		sbi PORTD, 4
+
+
+loop:
+	in r16, PIND
+	andi r16, 0b0010000
+
+	brne LEDon
+
+	cbi PORTB, 5
+
+	
+	rjmp loop
+
+
+LEDon:
+	sbi PORTB, 5
+	rjmp loop
