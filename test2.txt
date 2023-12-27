@@ -1,0 +1,16 @@
+call E
+call D
+call C
+call A
+call A
+call B
+call B
+call A
+call A
+call G
+call G
+call A
+call A
+call F
+call F
+call G
