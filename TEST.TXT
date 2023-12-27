@@ -1,0 +1,458 @@
+.org 0x0000
+jmp setup
+
+
+// na tem mestu vključimo knjiznica.asm
+// notri je kopica programov za delo, ki jih bomo potrebovali, a jih ne bi pisali sami
+.include "knjiznica.asm"
+
+setup:
+        sbi PORTB, 5
+        cbi DDRD, 4
+        sbi PORTD, 4
+ 
+call E
+call E
+call D
+call C
+call B
+call A
+call B
+call D
+call B
+call D
+call E
+call C
+call B
+call A
+call A
+call A
+call E
+call D
+call A
+call B
+call D
+call B
+call F
+call F
+call E
+call A
+call B
+call D
+call B
+call A
+call C
+call D
+call C
+call B
+call A
+call B
+call D
+call B
+call D
+call E
+call C
+call B
+call A
+call A
+call E
+call D
+call B
+call D
+call B
+call D
+call E
+call C
+call B
+call A
+call B
+call B
+call C
+call D
+call B
+call A
+call A
+call A
+call E
+call F
+call E
+call D
+call A
+call B
+call C
+call D
+call B
+call C
+call B
+call A
+call B
+call B
+call C
+call D
+call B
+call A
+call E
+call E
+call F
+call E
+call D
+call D
+call E
+call F
+call E
+call E
+call E
+call F
+call E
+call A
+call A
+call A
+call B
+call C
+call D
+call B
+call E
+call F
+call E
+call A
+call B
+call D
+call B
+call F
+call F
+call E
+call A
+call B
+call D
+call B
+call E
+call E
+call D
+call C
+call B
+call A
+call B
+call D
+call B
+call D
+call E
+call C
+call B
+call A
+call A
+call E
+call D
+call A
+call B
+call D
+call B
+call F
+call F
+call E
+call A
+call B
+call D
+call B
+call A
+call C
+call D
+call C
+call B
+call A
+call B
+call D
+call B
+call D
+call E
+call C
+call B
+call A
+call A
+call E
+call D
+call A
+call B
+call D
+call B
+call F
+call F
+call E
+call A
+call B
+call D
+call B
+call A
+call C
+call D
+call C
+call B
+call A
+call B
+call D
+call B
+call D
+call E
+call C
+call B
+call A
+call A
+call E
+call D
+call A
+call B
+call D
+call B
+call F
+call F
+call E
+call A
+call B
+call D
+call B
+call A
+call C
+call D
+call C
+call B
+call A
+call B
+call D
+call B
+call D
+call E
+call C
+call B
+call A
+call A
+
+
+loop:
+    rjmp loop
+
+A:
+    ldi r18, 190
+    ldi r19, 6
+    loopanjea:
+
+        ldi r17, 220
+        ldi r16, 4
+        sbi DDRB, 5
+
+        delayona:           
+            dec r17
+            brne delayona
+            ldi r17, 220
+            dec r16
+            brne delayona
+
+        ldi r16, 4
+        ldi r17, 220
+        cbi DDRB, 5
+
+
+        delayoffa:         
+            dec r17
+            brne delayoffa
+            ldi r17, 220
+            dec r16
+            brne delayoffa
+    
+
+    dec r18
+    brne loopanjea
+    
+    ldi r18, 190
+    dec r19
+    brne loopanjea
+
+    ret
+
+B:
+    ldi r18, 250
+    ldi r19, 4
+    loopanjeb:
+
+        ldi r17, 250
+        ldi r16, 4
+        sbi DDRB, 5
+
+        delayonb:           
+            dec r17
+            brne delayonb
+            ldi r17, 250
+            dec r16
+            brne delayonb
+
+        ldi r16, 4
+        ldi r17, 250
+        cbi DDRB, 5
+
+
+        delayoffb:         
+            dec r17
+            brne delayoffb
+            ldi r17, 250
+            dec r16
+            brne delayoffb
+   
+
+    dec r18
+    brne loopanjeb
+    
+    ldi r18, 250
+    dec r19
+    brne loopanjeb
+
+    ret
+
+C:
+    ldi r18, 240
+    ldi r19, 8
+    loopanjec:
+
+        ldi r17, 130
+        ldi r16, 4
+        sbi DDRB, 5
+
+        delayonc:           
+            dec r17
+            brne delayonc
+            ldi r17, 130
+            dec r16
+            brne delayonc
+
+        ldi r16, 4
+        ldi r17, 130
+        cbi DDRB, 5
+
+
+        delayoffc:         
+            dec r17
+            brne delayoffc
+            ldi r17, 130
+            dec r16
+            brne delayoffc
+    
+
+    dec r18
+    brne loopanjec
+    
+    ldi r18, 240
+    dec r19
+    brne loopanjec
+
+    ret
+
+D:
+    ldi r18, 169
+    ldi r19, 10
+    loopanjed:
+
+        ldi r17, 148
+        ldi r16, 4
+        sbi DDRB, 5
+
+        delayond:           
+            dec r17
+            brne delayond
+            ldi r17, 148
+            dec r16
+            brne delayond
+
+        ldi r16, 4
+        ldi r17, 148
+        cbi DDRB, 5
+
+
+        delayoffd:         
+            dec r17
+            brne delayoffd
+            ldi r17, 148
+            dec r16
+            brne delayoffd
+    
+
+    dec r18
+    brne loopanjed
+    
+    ldi r18, 250
+    dec r19
+    brne loopanjed
+
+    ret
+
+E:
+    ldi r18, 101
+    ldi r19, 15
+    loopanjee:
+
+        ldi r17, 165
+        ldi r16, 4
+        sbi DDRB, 5
+
+        delayone:           
+            dec r17
+            brne delayone
+            ldi r17, 165
+            dec r16
+            brne delayone
+
+        ldi r16, 4
+        ldi r17, 165
+        cbi DDRB, 5
+
+
+        delayoffe:         
+            dec r17
+            brne delayoffe
+            ldi r17, 165
+            dec r16
+            brne delayoffe
+    
+
+    dec r18
+    brne loopanjee
+    
+    ldi r18, 101
+    dec r19
+    brne loopanjee
+
+    ret
+
+F:
+    ldi r18, 143
+    ldi r19, 10
+    loopanjef:
+
+        ldi r17, 175
+        ldi r16, 4
+        sbi DDRB, 5
+
+        delayonf:           
+            dec r17
+            brne delayonf
+            ldi r17, 175
+            dec r16
+            brne delayonf
+
+        ldi r16, 4
+        ldi r17, 175
+        cbi DDRB, 5
+
+
+        delayofff:         
+            dec r17
+            brne delayofff
+            ldi r17, 175
+            dec r16
+            brne delayofff
+    
+
+    dec r18
+    brne loopanjef
+    
+    ldi r18, 250
+    dec r19
+    brne loopanjef
+
+    ret
