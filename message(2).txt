@@ -1,0 +1,197 @@
+.org 0x0000
+jmp setup
+
+
+// na tem mestu vključimo knjiznica.asm
+// notri je kopica programov za delo, ki jih bomo potrebovali, a jih ne bi pisali sami
+.include "knjiznica.asm"
+
+setup:
+        sbi PORTB, 5
+        cbi DDRD, 4
+        sbi PORTD, 4
+ 
+
+loop:
+    rjmp loop
+
+A5:
+    ldi r18, 71
+    loopanjea:
+
+        ldi r17, 142
+        ldi r16, 4
+        sbi DDRB, 5
+
+        delayona:           
+            dec r17
+            brne delayona
+            ldi r17, 142
+            dec r16
+            brne delayona
+
+        ldi r16, 4
+        ldi r17, 142
+        cbi DDRB, 5
+
+        delayoffa:         
+            dec r17
+            brne delayoffa
+            ldi r17, 142
+            dec r16
+            brne delayoffa
+    
+    dec r18
+    brne loopanjea
+    ret
+
+B5:
+    ldi r18, 62
+    loopanjeb:
+
+        ldi r17, 250
+        ldi r16, 2
+        sbi DDRB, 5
+
+        delayonb:           
+            dec r17
+            brne delayonb
+            ldi r17, 250
+            dec r16
+            brne delayonb
+
+        ldi r16, 2
+        ldi r17, 250
+        cbi DDRB, 5
+
+        delayoffb:         
+            dec r17
+            brne delayoffb
+            ldi r17, 250
+            dec r16
+            brne delayoffb
+   
+    dec r18
+    brne loopanjeb
+    ret
+
+C5:
+    ldi r18, 120
+    loopanjec:
+
+        ldi r17, 240
+        ldi r16, 4
+        sbi DDRB, 5
+
+        delayonc:           
+            dec r17
+            brne delayonc
+            ldi r17, 240
+            dec r16
+            brne delayonc
+
+        ldi r16, 4
+        ldi r17, 240
+        cbi DDRB, 5
+
+        delayoffc:         
+            dec r17
+            brne delayoffc
+            ldi r17, 240
+            dec r16
+            brne delayoffc
+
+    dec r18
+    brne loopanjec
+    ret
+
+D5:
+    ldi r18, 106
+    loopanjed:
+
+        ldi r17, 212
+        ldi r16, 4
+        sbi DDRB, 5
+
+        delayond:           
+            dec r17
+            brne delayond
+            ldi r17, 212
+            dec r16
+            brne delayond
+
+        ldi r16, 4
+        ldi r17, 212
+        cbi DDRB, 5
+
+
+        delayoffd:         
+            dec r17
+            brne delayoffd
+            ldi r17, 212
+            dec r16
+            brne delayoffd
+    
+	dec r18
+    brne loopanjed
+    ret
+
+E5:
+    ldi r18, 95
+    loopanjee:
+
+        ldi r17, 189
+        ldi r16, 4
+        sbi DDRB, 5
+
+        delayone:           
+            dec r17
+            brne delayone
+            ldi r17, 189
+            dec r16
+            brne delayone
+
+        ldi r16, 4
+        ldi r17, 189
+        cbi DDRB, 5
+
+        delayoffe:         
+            dec r17
+            brne delayoffe
+            ldi r17, 189
+            dec r16
+            brne delayoffe
+
+    dec r18
+    brne loopanjee
+    ret
+
+F5:
+    ldi r18, 89
+    loopanjef:
+
+        ldi r17, 178
+        ldi r16, 4
+        sbi DDRB, 5
+
+        delayonf:           
+            dec r17
+            brne delayonf
+            ldi r17, 178
+            dec r16
+            brne delayonf
+
+        ldi r16, 4
+        ldi r17, 178
+        cbi DDRB, 5
+
+        delayofff:         
+            dec r17
+            brne delayofff
+            ldi r17, 178
+            dec r16
+            brne delayofff
+    
+    dec r18
+    brne loopanje
+    ret
