@@ -1,0 +1,1463 @@
+.org 0x0000
+jmp setup
+
+
+// na tem mestu vklju?imo knjiznica.asm
+// notri je kopica programov za delo, ki jih bomo potrebovali, a jih ne bi pisali sami
+
+
+setup:
+        sbi PORTB, 5
+        cbi DDRD, 4
+        sbi PORTD, 4
+ 
+
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call A4
+call A4
+call A4
+call A4
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call FS5
+call FS5
+call FS5
+call FS5
+call FS5
+call FS5
+call A5
+call G5
+call FS5
+call FS5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call B4
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call A4
+call A4
+call A4
+call A4
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call FS5
+call FS5
+call FS5
+call FS5
+call FS5
+call FS5
+call A5
+call G5
+call FS5
+call FS5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call B4
+call D5
+call D5
+call D5
+call REST
+call REST
+call REST
+call REST
+call B4
+call B4
+call CS5
+call CS5
+call D5
+call D5
+call D5
+call D5
+call E5
+call E5
+call CS5
+call CS5
+call CS5
+call B4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call REST
+call REST
+call REST
+call REST
+call REST
+call REST
+call B4
+call B4
+call B4
+call B4
+call CS5
+call CS5
+call D5
+call D5
+call B4
+call B4
+call B4
+call B4
+call A4
+call A4
+call A5
+call A5
+call REST
+call REST
+call A5
+call A5
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call REST
+call REST
+call REST
+call REST
+call B4
+call B4
+call B4
+call B4
+call CS5
+call CS5
+call D5
+call D5
+call B4
+call B4
+call D5
+call D5
+call E5
+call E5
+call REST
+call REST
+call REST
+call REST
+call CS5
+call CS5
+call B4
+call B4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call REST
+call REST
+call REST
+call REST
+call REST
+call REST
+call B4
+call B4
+call B4
+call B4
+call CS5
+call CS5
+call D5
+call D5
+call B4
+call B4
+call A4
+call A4
+call A4
+call A4
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call FS5
+call FS5
+call E5
+call E5
+call E5
+call E5
+call REST
+call REST
+call REST
+call REST
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call E5
+call E5
+call FS5
+call FS5
+call D5
+call D5
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call FS5
+call FS5
+call E5
+call E5
+call E5
+call E5
+call A4
+call A4
+call A4
+call A4
+call REST
+call REST
+call REST
+call REST
+call REST
+call REST
+call REST
+call REST
+call B4
+call B4
+call CS5
+call CS5
+call D5
+call D5
+call B4
+call B4
+call REST
+call REST
+call E5
+call E5
+call FS5
+call FS5
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call A4
+call B4
+call D5
+call B4
+call FS5
+call FS5
+call FS5
+call FS5
+call FS5
+call FS5
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call A4
+call B4
+call D5
+call B4
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call D5
+call D5
+call D5
+call CS5
+call B4
+call B4
+call B4
+call A4
+call B4
+call D5
+call B4
+call D5
+call D5
+call D5
+call D5
+call E5
+call E5
+call CS5
+call CS5
+call CS5
+call B4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call E5
+call E5
+call E5
+call E5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call A4
+call B4
+call D5
+call B4
+call FS5
+call FS5
+call FS5
+call FS5
+call FS5
+call FS5
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call A4
+call B4
+call D5
+call B4
+call A5
+call A5
+call A5
+call A5
+call CS5
+call CS5
+call D5
+call D5
+call D5
+call CS5
+call B4
+call B4
+call A4
+call B4
+call D5
+call B4
+call D5
+call D5
+call D5
+call D5
+call E5
+call E5
+call CS5
+call CS5
+call CS5
+call B4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call E5
+call E5
+call E5
+call E5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call REST
+call REST
+call REST
+call REST
+call REST
+call REST
+call B4
+call B4
+call D5
+call D5
+call B4
+call B4
+call D5
+call D5
+call E5
+call E5
+call E5
+call E5
+call REST
+call REST
+call REST
+call REST
+call CS5
+call CS5
+call B4
+call B4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call REST
+call REST
+call REST
+call REST
+call REST
+call REST
+call B4
+call B4
+call B4
+call B4
+call CS5
+call CS5
+call D5
+call D5
+call B4
+call B4
+call A4
+call A4
+call A4
+call A4
+call REST
+call REST
+call A5
+call A5
+call A5
+call A5
+call E5
+call E5
+call FS5
+call FS5
+call E5
+call E5
+call D5
+call D5
+call REST
+call REST
+call A4
+call A4
+call B4
+call B4
+call CS5
+call CS5
+call D5
+call D5
+call B4
+call B4
+call REST
+call REST
+call CS5
+call CS5
+call B4
+call B4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call REST
+call REST
+call REST
+call REST
+call B4
+call B4
+call B4
+call B4
+call CS5
+call CS5
+call D5
+call D5
+call B4
+call B4
+call A4
+call A4
+call A4
+call A4
+call REST
+call REST
+call REST
+call REST
+call E5
+call E5
+call E5
+call E5
+call FS5
+call FS5
+call FS5
+call FS5
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call E5
+call E5
+call FS5
+call FS5
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call FS5
+call FS5
+call E5
+call E5
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call REST
+call REST
+call REST
+call REST
+call REST
+call REST
+call A4
+call A4
+call B4
+call B4
+call CS5
+call CS5
+call D5
+call D5
+call B4
+call B4
+call REST
+call REST
+call E5
+call E5
+call FS5
+call FS5
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call A4
+call B4
+call D5
+call B4
+call FS5
+call FS5
+call FS5
+call FS5
+call FS5
+call FS5
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call A4
+call B4
+call D5
+call B4
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call D5
+call D5
+call D5
+call CS5
+call B4
+call B4
+call A4
+call B4
+call D5
+call B4
+call D5
+call D5
+call D5
+call D5
+call E5
+call E5
+call CS5
+call CS5
+call CS5
+call B4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call E5
+call E5
+call E5
+call E5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call A4
+call B4
+call D5
+call B4
+call FS5
+call FS5
+call FS5
+call FS5
+call FS5
+call FS5
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call A4
+call B4
+call D5
+call B4
+call A5
+call A5
+call A5
+call A5
+call CS5
+call CS5
+call D5
+call D5
+call D5
+call CS5
+call B4
+call B4
+call A4
+call B4
+call D5
+call B4
+call D5
+call D5
+call D5
+call D5
+call E5
+call E5
+call CS5
+call CS5
+call CS5
+call B4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call E5
+call E5
+call E5
+call E5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call A4
+call B4
+call D5
+call B4
+call FS5
+call FS5
+call FS5
+call FS5
+call FS5
+call FS5
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call A4
+call B4
+call D5
+call B4
+call A5
+call A5
+call A5
+call A5
+call CS5
+call CS5
+call D5
+call D5
+call D5
+call CS5
+call B4
+call B4
+call A4
+call B4
+call D5
+call B4
+call D5
+call D5
+call D5
+call D5
+call E5
+call E5
+call CS5
+call CS5
+call CS5
+call B4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call E5
+call E5
+call E5
+call E5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call A4
+call B4
+call D5
+call B4
+call FS5
+call FS5
+call FS5
+call FS5
+call FS5
+call FS5
+call E5
+call E5
+call E5
+call E5
+call E5
+call E5
+call A4
+call B4
+call D5
+call B4
+call A5
+call A5
+call A5
+call A5
+call CS5
+call CS5
+call D5
+call D5
+call D5
+call CS5
+call B4
+call B4
+call A4
+call B4
+call D5
+call B4
+call D5
+call D5
+call D5
+call D5
+call E5
+call E5
+call CS5
+call CS5
+call CS5
+call B4
+call A4
+call A4
+call A4
+call A4
+call A4
+call A4
+call E5
+call E5
+call E5
+call E5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call D5
+call REST
+call REST
+call REST
+call REST
+
+
+    rjmp forever
+
+A5:
+    ldi r18, 71
+    loopanjea5:
+
+        ldi r17, 142
+        ldi r16, 24
+        sbi DDRB, 5
+
+        delayona5:           
+            dec r17
+            brne delayona5
+            ldi r17, 142
+            dec r16
+            brne delayona5
+
+        ldi r16, 24
+        ldi r17, 142
+        cbi DDRB, 5
+
+        delayoffa5:         
+            dec r17
+            brne delayoffa5
+            ldi r17, 142
+            dec r16
+            brne delayoffa5
+    
+    dec r18
+    brne loopanjea5
+    ret
+
+B5:
+    ldi r18, 62
+    loopanjeb5:
+
+        ldi r17, 250
+        ldi r16, 24
+        sbi DDRB, 5
+
+        delayonb5:           
+            dec r17
+            brne delayonb5
+            ldi r17, 250
+            dec r16
+            brne delayonb5
+
+        ldi r16, 24
+        ldi r17, 250
+        cbi DDRB, 5
+
+        delayoffb5:         
+            dec r17
+            brne delayoffb5
+            ldi r17, 250
+            dec r16
+            brne delayoffb5
+   
+    dec r18
+    brne loopanjeb5
+    ret
+
+C5:
+    ldi r18, 120
+    loopanjec5:
+
+        ldi r17, 240
+        ldi r16, 24
+        sbi DDRB, 5
+
+        delayonc5:           
+            dec r17
+            brne delayonc5
+            ldi r17, 240
+            dec r16
+            brne delayonc5
+
+        ldi r16, 24
+        ldi r17, 240
+        cbi DDRB, 5
+
+        delayoffc5:         
+            dec r17
+            brne delayoffc5
+            ldi r17, 240
+            dec r16
+            brne delayoffc5
+
+    dec r18
+    brne loopanjec5
+    ret
+
+D5:
+    ldi r18, 106
+    loopanjed5:
+
+        ldi r17, 212
+        ldi r16, 24
+        sbi DDRB, 5
+
+        delayond5:           
+            dec r17
+            brne delayond5
+            ldi r17, 212
+            dec r16
+            brne delayond5
+
+        ldi r16, 24
+        ldi r17, 212
+        cbi DDRB, 5
+
+
+        delayoffd5:         
+            dec r17
+            brne delayoffd5
+            ldi r17, 212
+            dec r16
+            brne delayoffd5
+    
+	dec r18
+    brne loopanjed5
+    ret
+
+E5:
+    ldi r18, 95
+    loopanjee5:
+
+        ldi r17, 189
+        ldi r16, 24
+        sbi DDRB, 5
+
+        delayone5:           
+            dec r17
+            brne delayone5
+            ldi r17, 189
+            dec r16
+            brne delayone5
+
+        ldi r16, 24
+        ldi r17, 189
+        cbi DDRB, 5
+
+        delayoffe5:         
+            dec r17
+            brne delayoffe5
+            ldi r17, 189
+            dec r16
+            brne delayoffe5
+
+    dec r18
+    brne loopanjee5
+    ret
+
+F5:
+    ldi r18, 89
+    loopanjef5:
+
+        ldi r17, 178
+        ldi r16, 24
+        sbi DDRB, 5
+
+        delayonf5:           
+            dec r17
+            brne delayonf5
+            ldi r17, 178
+            dec r16
+            brne delayonf5
+
+        ldi r16, 24
+        ldi r17, 178
+        cbi DDRB, 5
+
+        delayofff5:         
+            dec r17
+            brne delayofff5
+            ldi r17, 178
+            dec r16
+            brne delayofff5
+    
+    dec r18
+    brne loopanjef5
+    ret
+
+
+
+FS5:
+    ldi r18, 84
+    loopanjefs5:
+
+        ldi r17, 185
+        ldi r16, 24
+        sbi DDRB, 5
+
+        delayonfs5:           
+            dec r17
+            brne delayonfs5
+            ldi r17, 185
+            dec r16
+            brne delayonfs5
+
+        ldi r16, 24
+        ldi r17, 185
+        cbi DDRB, 5
+
+        delayofffs5:         
+            dec r17
+            brne delayofffs5
+            ldi r17, 185
+            dec r16
+            brne delayofffs5
+    
+    dec r18
+    brne loopanjefs5
+    ret
+
+
+CS5:
+    ldi r18, 113
+    loopanjecs5:
+
+        ldi r17, 138
+        ldi r16, 24
+        sbi DDRB, 5
+
+        delayoncs5:           
+            dec r17
+            brne delayoncs5
+            ldi r17, 138
+            dec r16
+            brne delayoncs5
+
+        ldi r16, 24
+        ldi r17, 138
+        cbi DDRB, 5
+
+        delayoffcs5:         
+            dec r17
+            brne delayoffcs5
+            ldi r17, 178
+            dec r16
+            brne delayoffcs5
+    
+    dec r18
+    brne loopanjecs5
+    ret
+
+
+G5:
+    ldi r18, 79
+    loopanjeg5:
+
+        ldi r17, 196
+        ldi r16, 24
+        sbi DDRB, 5
+
+        delayong5:           
+            dec r17
+            brne delayong5
+            ldi r17, 196
+            dec r16
+            brne delayong5
+
+        ldi r16, 24
+        ldi r17, 196
+        cbi DDRB, 5
+
+        delayoffg5:         
+            dec r17
+            brne delayoffg5
+            ldi r17, 196
+            dec r16
+            brne delayoffg5
+    
+    dec r18
+    brne loopanjeg5
+    ret
+
+
+
+
+A4:
+    ldi r18, 142
+    loopanjea4:
+
+        ldi r17, 142
+        ldi r16, 12
+        sbi DDRB, 5
+
+        delayona4:           
+            dec r17
+            brne delayona4
+            ldi r17, 142
+            dec r16
+            brne delayona4
+
+        ldi r16, 12
+        ldi r17, 142
+        cbi DDRB, 5
+
+        delayoffa4:         
+            dec r17
+            brne delayoffa4
+            ldi r17, 142
+            dec r16
+            brne delayoffa4
+    
+    dec r18
+    brne loopanjea4
+    ret
+
+B4:
+    ldi r18, 124
+    loopanjeb4:
+
+        ldi r17, 250
+        ldi r16, 12
+        sbi DDRB, 5
+
+        delayonb4:           
+            dec r17
+            brne delayonb4
+            ldi r17, 250
+            dec r16
+            brne delayonb4
+
+        ldi r16, 12
+        ldi r17, 250
+        cbi DDRB, 5
+
+        delayoffb4:         
+            dec r17
+            brne delayoffb4
+            ldi r17, 250
+            dec r16
+            brne delayoffb4
+   
+    dec r18
+    brne loopanjeb4
+    ret
+
+C4:
+    ldi r18, 240
+    loopanjec4:
+
+        ldi r17, 240
+        ldi r16, 12
+        sbi DDRB, 5
+
+        delayonc4:           
+            dec r17
+            brne delayonc4
+            ldi r17, 240
+            dec r16
+            brne delayonc4
+
+        ldi r16, 12
+        ldi r17, 240
+        cbi DDRB, 5
+
+        delayoffc4:         
+            dec r17
+            brne delayoffc4
+            ldi r17, 240
+            dec r16
+            brne delayoffc4
+
+    dec r18
+    brne loopanjec4
+    ret
+
+D4:
+    ldi r18, 212
+    loopanjed4:
+
+        ldi r17, 212
+        ldi r16, 12
+        sbi DDRB, 5
+
+        delayond4:           
+            dec r17
+            brne delayond4
+            ldi r17, 212
+            dec r16
+            brne delayond4
+
+        ldi r16, 12
+        ldi r17, 212
+        cbi DDRB, 5
+
+
+        delayoffd4:         
+            dec r17
+            brne delayoffd4
+            ldi r17, 212
+            dec r16
+            brne delayoffd4
+    
+	dec r18
+    brne loopanjed4
+    ret
+
+E4:
+    ldi r18, 190
+    loopanjee4:
+
+        ldi r17, 189
+        ldi r16, 12
+        sbi DDRB, 5
+
+        delayone4:           
+            dec r17
+            brne delayone4
+            ldi r17, 189
+            dec r16
+            brne delayone4
+
+        ldi r16, 12
+        ldi r17, 189
+        cbi DDRB, 5
+
+        delayoffe4:         
+            dec r17
+            brne delayoffe4
+            ldi r17, 189
+            dec r16
+            brne delayoffe4
+
+    dec r18
+    brne loopanjee4
+    ret
+
+F4:
+    ldi r18, 178
+    loopanjef4:
+
+        ldi r17, 178
+        ldi r16, 12
+        sbi DDRB, 5
+
+        delayonf4:           
+            dec r17
+            brne delayonf4
+            ldi r17, 178
+            dec r16
+            brne delayonf4
+
+        ldi r16, 12
+        ldi r17, 178
+        cbi DDRB, 5
+
+        delayofff4:         
+            dec r17
+            brne delayofff4
+            ldi r17, 178
+            dec r16
+            brne delayofff4
+    
+    dec r18
+    brne loopanjef4
+    ret
+
+
+
+FS4:
+    ldi r18, 168
+    loopanjefs4:
+
+        ldi r17, 185
+        ldi r16, 12
+        sbi DDRB, 5
+
+        delayonfs4:           
+            dec r17
+            brne delayonfs4
+            ldi r17, 185
+            dec r16
+            brne delayonfs4
+
+        ldi r16, 12
+        ldi r17, 185
+        cbi DDRB, 5
+
+        delayofffs4:         
+            dec r17
+            brne delayofffs4
+            ldi r17, 185
+            dec r16
+            brne delayofffs4
+    
+    dec r18
+    brne loopanjefs4
+    ret
+
+
+CS4:
+    ldi r18, 226
+    loopanjecs4:
+
+        ldi r17, 138
+        ldi r16, 12
+        sbi DDRB, 5
+
+        delayoncs4:           
+            dec r17
+            brne delayoncs4
+            ldi r17, 138
+            dec r16
+            brne delayoncs4
+
+        ldi r16, 12
+        ldi r17, 138
+        cbi DDRB, 5
+
+        delayoffcs4:         
+            dec r17
+            brne delayoffcs4
+            ldi r17, 178
+            dec r16
+            brne delayoffcs4
+    
+    dec r18
+    brne loopanjecs4
+    ret
+
+
+G4:
+    ldi r18, 158
+    loopanjeg4:
+
+        ldi r17, 196
+        ldi r16, 12
+        sbi DDRB, 5
+
+        delayong4:           
+            dec r17
+            brne delayong4
+            ldi r17, 196
+            dec r16
+            brne delayong4
+
+        ldi r16, 12
+        ldi r17, 196
+        cbi DDRB, 5
+
+        delayoffg4:         
+            dec r17
+            brne delayoffg4
+            ldi r17, 196
+            dec r16
+            brne delayoffg4
+    
+    dec r18
+    brne loopanjeg4
+    ret
+
+REST:
+	ldi r21, 124
+	ldi r22, 183
+	
+	delay1:
+		delay2:
+			nop
+			dec r21
+			brne delay2
+		dec r22
+		brne delay1
+	ret
+
+
+forever: rjmp forever
+
+	
