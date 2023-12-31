@@ -1360,3 +1360,68 @@ FS5:
     dec r18
     brne loopanje2FS5
     ret
+
+GS5:
+
+    ldi r18, 83
+    ldi r19, 8
+
+    loopanjeGS5:
+
+        ldi r17, 150
+        ldi r16, 4
+        sbi DDRB, 5
+
+        delayonGS5:
+            dec r17
+            brne delayonGS5
+            ldi r17, 150
+            dec r16
+            brne delayonGS5
+
+        ldi r17, 150
+        ldi r16, 4
+        cbi DDRB, 5
+
+        delayoffGS5:
+            dec r17
+            brne delayoffGS5
+            ldi r17, 150
+            dec r16
+            brne delayoffGS5
+
+    dec r18
+    brne loopanjeGS5
+    ldi r18, 83
+    dec r19
+    brne loopanjeGS5
+
+    ldi r18, 83
+
+    loopanje2GS5:
+
+        ldi r17, 150
+        ldi r16, 4
+        sbi DDRB, 5
+
+        delayon2GS5:
+            dec r17
+            brne delayon2GS5
+            ldi r17, 150
+            dec r16
+            brne delayon2GS5
+
+        ldi r17, 150
+        ldi r16, 4
+        cbi DDRB, 5
+
+        delayoff2GS5:
+            dec r17
+            brne delayoff2GS5
+            ldi r17, 150
+            dec r16
+            brne delayoff2GS5
+
+    dec r18
+    brne loopanje2GS5
+    ret
