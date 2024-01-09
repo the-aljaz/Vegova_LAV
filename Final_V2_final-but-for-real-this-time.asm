@@ -18,22 +18,6 @@ loop:
         
 song:
 	sbi PORTB, 5
-	call C5
-	call C5
-	call C5
-	call C5
-	call C5
-	call C5
-	call C5
-	call C5
-	call C5
-	call C5
-	call C5
-	call C5
-	call C5
-	call C5
-	call C5
-	call C5
 	call REST
 	call REST
 	call REST
@@ -82,6 +66,17 @@ song:
 	call REST
 	call REST
 	call REST
+	call D5
+	call D5
+	call REST
+	call D5
+	call D5
+	call REST
+	call D5
+	call D5
+	call REST
+	call D5
+	call D5
     call D5
     call D5
     call D5
