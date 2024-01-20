@@ -76,7 +76,7 @@ catalan_mode:
 	call brisalci
 	call pes_green
 	call avto_green
-	rjmp forever
+	ret
 
 all_on:
     sbi PORTB, 5
